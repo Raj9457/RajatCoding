@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Accordion Example</title>
+</head>
+<body>
+  <div class="accordion">
+    <div class="accordion-header">Section 1</div>
+    <div class="accordion-content">
+      <p>Content for section 1 goes here.</p>
+    </div>
+  </div>
+  <div class="accordion">
+    <div class="accordion-header">Section 2</div>
+    <div class="accordion-content">
+      <p>Content for section 2 goes here.</p>
+    </div>
+  </div>
+  <!-- Add more sections as needed -->
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+  
+    <input type="submit" value="Submit">
+  </form>
+  <div id="error"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
