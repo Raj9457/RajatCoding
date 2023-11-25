@@ -33,6 +33,8 @@
 // n2.color="blue"
 // console.log(n1,n2)
 // let Nike=[]
+
+
 // function addProduct(e){
 //     e.preventDefault();
 //     let form=document.getElementById("product_form");
@@ -42,6 +44,8 @@
 //     Nike.push(n1)
 //     console.log(Nike)
 // }
+
+
 
 // CALL APPLY BIND  -----
 
