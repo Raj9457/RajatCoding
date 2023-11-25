@@ -48,39 +48,43 @@
 
 // ::::::::::CALL------
 
-let kitchen={
-    name:"Kitchen",
-    purpose:"cook",
-    cookfood(order){
-        console.log(`Serving ${order} in ${this.name}`)
-    }
-}
+// let kitchen={
+//     name:"Kitchen",
+//     purpose:"cook",
+//     cookfood(order){
+//         console.log(`Serving ${order} in ${this.name}`)
+//     }
+// }
 
-let bedroom={
-    name:"Bedroom",
-    purpose:"Sleep",
-}
-kitchen.cookfood("Maggie")
+// let bedroom={
+//     name:"Bedroom",
+//     purpose:"Sleep",
+// }
+// kitchen.cookfood("Maggie")
 
-kitchen.cookfood.call(bedroom,"Biryani");
+// kitchen.cookfood.call(bedroom,"Biryani");
 
-function ringbell(day,action){
-    console.log(`${this.name} rang the bell on ${day} and ${action}. `);
-}
-let person1={
-    name:"Rajat",
-}
-let person2={
-    name:"Yash",
-}
+// function ringbell(day,action){
+//     console.log(`${this.name} rang the bell on ${day} and ${action}. `);
+// }
+// let person1={
+//     name:"Rajat",
+// }
+// let person2={
+//     name:"Yash",
+// }
 
-ringbell.call(person1,"Thursday","ranaway")
+// ringbell.call(person1,"Thursday","ranaway")
 
-// --------------------------------------Apply------
-ringbell.apply(person2,["Monday","beaten by sticks"])
+// // --------------------------------------Apply------
+// ringbell.apply(person2,["Monday","beaten by sticks"])
 
-//--------------------------------------BIND-----
-let x=ringbell.bind(person2,"Sunday","ran on bike");
-x();
+// //--------------------------------------BIND-----
+// let x=ringbell.bind(person2,"Sunday","ran on bike");
+// x();
 
 
+// {
+//     assign="Rajat";
+// }
+// console.log(assign);
