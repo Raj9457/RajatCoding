@@ -46,7 +46,7 @@ n1.coupen();
 let newar= new Array(1,2,3)
 console.log(newar)
 
-function MyArray(){    
+ function MyArray(){    
     for(let i=0;i<arguments.length;i++){
         this[i]=arguments[i];
     }
