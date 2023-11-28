@@ -14,7 +14,7 @@ document.getElementById("search").addEventListener("click",function(){
 
 document.getElementById("search").addEventListener("click",async function(){
     try {
-        let movie_name=document.getElementById("query");
+        let movie_name=document.getElementById("query").value;
         let res=await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=46db219&s=${movie_name}`);
         let resdata=await res.json();
         console.log(resdata)
