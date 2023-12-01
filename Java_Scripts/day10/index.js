@@ -13,11 +13,24 @@ document.getElementById("search").addEventListener("click",async ()=>{
     }
     
 })
+document.getElementById("rating").addEventListener("click",async ()=>{
+    try {
+        let query=document.getElementById("query").value;
+        let res=await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=${apikey}&order=rating`);
+        let resdata=await res.json();
+        const actual_data=resdata.items;
+        append_data(actual_data)
+    } catch (error) {
+        console.log(error);
+    }
+    
+})
 
 const append_data=(data)=>{
     let container=document.getElementById("container");
     container.innerHTML=null;
-    data.forEach(({snippet:{channelTitle,title,thumbnails},id:{videoId}})=>{
+    console.log(data)
+    data.forEach(({snippet:{channelTitle,title,thumbnails},id:{videoId},snippet})=>{
         let div=document.createElement("div");
         let image=document.createElement("img");
         image.src=thumbnails.high.url;
@@ -27,6 +40,19 @@ const append_data=(data)=>{
         channel_title.innerText=channelTitle;
         div.append(image,video_title,channelTitle);
         container.append(div);
-        console.log(title,channelTitle,videoId,thumbnails)        
+        
+        let data={
+            videoId,
+            snippet
+        }
+        div.addEventListener("click",()=>{
+            storeclickedvideo(data);
+        })
     })
+}
+
+
+const storeclickedvideo=(data)=>{
+    localStorage.setItem("clickedvideo",JSON.stringify(data));
+    window.location.href="video.html"
 }
