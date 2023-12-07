@@ -1,0 +1,16 @@
+div{
+    border: 1px solid black;
+}
+#navbar{
+    height: 100px;
+}
+#main{
+    display: flex;
+    height: 500px;
+}
+#video{
+    flex: 3;
+}
+#recommendation{
+    flex: 1;
+}
