@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": "one",
+      "caption": "fdkaljfl",
+      "image_url": ""
+    },
+    {
+      "id": "gsfg",
+      "caption": "gsfgq",
+      "image_url": ""
+    },
+    {
+      "id": "fadf",
+      "caption": "fa",
+      "image_url": "https://i.ibb.co/T42JX5R/IMG20170608121112.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

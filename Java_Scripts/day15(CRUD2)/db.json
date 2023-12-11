@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "caption": "firstone",
+      "image_url": "https://i.ibb.co/mSrZd9j/20160130-160359.jpg"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

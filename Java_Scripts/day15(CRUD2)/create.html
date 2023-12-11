@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Add Post</h3>
+        <input type="text" id="id">
+        <input type="text" id="caption">
+        <input type="file" id="image" accept="image/*" >
+        <button id="create_btn" >Create</button>
+    </div>
+    <div>
+        <h3>Delete Post</h3>
+        <input type="text" id="delete_id">        
+        <button id="delete_btn" >Delete</button>
+    </div>
+    <div>
+        <h3>Update Post by PATCH</h3>
+        <input type="text" id="update_id">    
+        <input type="text" id="update_caption">    
+        <button id="update_btn" >Update</button>
+    </div>
+    <div>
+        <h3>Update Post by PUT</h3>
+        <input type="text" id="update_id_put">    
+        <input type="text" id="update_caption_put">  
+        <input type="file" id="update_image" accept="image/*">  
+        <button id="update_btn_put" >Update</button>
+    </div>
+
+</body>
+<script type="module" src="create.js"></script>
+</html>
