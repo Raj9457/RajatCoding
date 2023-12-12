@@ -5,6 +5,9 @@ import TodoList from './Components/TodoList';
 
 function App() {
   let [todos,setTodos]=React.useState([]);
+  let [hide,setHide]=React.useState(true);
+  let [editId,setEditId]=React.useState(null);
+  let [editTask,setEditTask]=React.useState("");
 
   const handleTodos=(task)=>{
     let newTodo={
@@ -23,14 +26,31 @@ function App() {
     setTodos(()=>todos.filter((ele)=>ele.id!=id))
   }
 
-  console.log(todos);
+  const handleEdit=(id)=>{
+    console.log(id)
+    setEditId(id);
+    setHide(!hide)
+  }
+
+  const updateTask = () => {
+    setTodos((prevTodos) =>
+      prevTodos.map((ele) => (ele.id === editId ? { ...ele, title: editTask } : ele))
+    );
+    setEditId(null);
+    setHide(!hide);
+    setEditTask("");
+  };
+
   return (
     <div className="App">
       <TodoApp handleTodos={handleTodos}/>
+      <div hidden={hide}>
+        <input type="text" value={editTask} placeholder="Edited Title" onChange={(e)=>setEditTask(e.target.value)}/>
+        <button onClick={()=>updateTask()}>Edit Task</button>
+      </div>      
       {todos.map((ele)=>
-      <TodoList List={ele} handleToggle={handleToggle} handleDelete={handleDelete}/>
+      <TodoList List={ele} handleToggle={handleToggle} handleDelete={handleDelete} handleEdit={handleEdit}/>
       )}
-      
     </div>
   );
 }
