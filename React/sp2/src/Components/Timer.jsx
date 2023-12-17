@@ -9,11 +9,13 @@ const Timer = () => {
             setCount((prev)=>{
                 console.log(prev);
                 if(prev<=0){
+                    clearInterval(id);
                     return 0;
                 }
                 return prev-1;
             })            
         },1000)
+
         let cleanup=()=>{
             clearInterval(id);
         }
