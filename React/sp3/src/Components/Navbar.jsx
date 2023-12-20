@@ -30,6 +30,10 @@ const Navbar = () => {
       {
         path:"/users",
         text:"Users"
+      },
+      {
+        path:"/login",
+        text:"Login"
       }
     ]
   return (
@@ -56,7 +60,7 @@ const Navbar = () => {
         key={i} to={ele.path}>{ele.text}</NavLink>
       )}
 
-      <button disabled={isAuth} onClick={Login}>Login</button>
+      
       <button disabled={!isAuth} onClick={Logout}>Logout</button>
     </div>
   )
