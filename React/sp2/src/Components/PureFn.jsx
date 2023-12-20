@@ -3,6 +3,7 @@ import React from 'react';
 const PureFn = () => {
   let array = [1, 2, 3, 4, 5];
 
+  let less_url="https://youtube.com/shorts/YtU88yf2ruo?feature=shared";
   const make_array = (array, number) => {
     array.push(number);
     return [...array, number];
