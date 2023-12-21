@@ -10,7 +10,7 @@ const SingleUser = () => {
         .then((res)=>res.json())
         .then((res)=>setDetails(res))
         .catch((error)=>console.log(error));
-    },[])
+    },[id])
   return (
     <div>
       <h1>Single User Details</h1>
